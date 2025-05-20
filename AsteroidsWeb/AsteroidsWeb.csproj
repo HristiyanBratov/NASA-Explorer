@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Asteroids.Models\Asteroids.Models.csproj" />
+    <ProjectReference Include="..\Asteroids.Services\Asteroids.Services.csproj" />
+    <ProjectReference Include="..\Asteroids.Utility\Asteroids.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

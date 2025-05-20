@@ -1,0 +1,13 @@
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\bin\Debug\net8.0\Asteroids.Models.deps.json
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\bin\Debug\net8.0\Asteroids.Models.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\bin\Debug\net8.0\Asteroids.Models.pdb
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.AssemblyInfoInputs.cache
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.AssemblyInfo.cs
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.csproj.CoreCompileInputs.cache
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.sourcelink.json
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\refint\Asteroids.Models.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.pdb
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\ref\Asteroids.Models.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Models\obj\Debug\net8.0\Asteroids.Models.csproj.AssemblyReference.cache

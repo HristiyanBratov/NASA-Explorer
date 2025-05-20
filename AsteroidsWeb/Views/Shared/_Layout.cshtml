@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Asteroids</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/AsteroidsWeb.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" />
+</head>
+<body class="font-monospace h-100 d-flex flex-column bg-light">
+    <header>
+        <nav class="navbar navbar-light bg-dark border-bottom box-shadow p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center gap-4" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/asteroids.png" alt="logo" width="70px" />
+                    <span class="h3 fw-bold text-white">
+                        Asteroids by NASA
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+     <main role="main">
+        <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+            <div class="container">
+                    @RenderBody()
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

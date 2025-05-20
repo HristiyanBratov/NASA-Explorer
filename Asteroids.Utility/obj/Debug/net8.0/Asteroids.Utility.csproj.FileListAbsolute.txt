@@ -1,0 +1,13 @@
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\bin\Debug\net8.0\Asteroids.Utility.deps.json
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\bin\Debug\net8.0\Asteroids.Utility.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\bin\Debug\net8.0\Asteroids.Utility.pdb
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.AssemblyInfoInputs.cache
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.AssemblyInfo.cs
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.csproj.CoreCompileInputs.cache
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.sourcelink.json
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\refint\Asteroids.Utility.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.pdb
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\ref\Asteroids.Utility.dll
+C:\Users\hrist\Desktop\Coding\Asteroids\Asteroids.Utility\obj\Debug\net8.0\Asteroids.Utility.csproj.AssemblyReference.cache

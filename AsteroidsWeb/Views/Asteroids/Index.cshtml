@@ -1,0 +1,119 @@
+﻿@model List<Asteroids.Models.Asteroid>
+
+@{
+    ViewData["Title"] = "Asteroids";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Asteroids</h1>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form method="get" class="mb-4">
+        <div class="row g-3 align-items-end">
+            <div class="col-md-2">
+                <label for="startDate" class="form-label">Start Date:</label>
+                <input type="date" class="form-control" id="startDate" name="startDate"
+                       value="@ViewBag.StartDate" max="@ViewBag.Today" />
+            </div>
+
+            <div class="col-md-2">
+                <label for="endDate" class="form-label">End Date:</label>
+                <input type="date" class="form-control" id="endDate" name="endDate"
+                       value="@ViewBag.EndDate" min="@ViewBag.StartDate" disabled/>
+            </div>
+
+            <div class="col-md-auto">
+                <button class="btn btn-primary" type="submit" asp-action="Index">Fetch</button>
+                <a asp-action="ExportToExcel" class="btn btn-success" role="button">
+                    Export to Excel
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Desktop & Tablet Table View -->
+
+    <div class="d-none d-md-block">
+        <div class="mb-lg-5">
+
+            <form method="get" class="row g-3 mb-4">
+                <input type="hidden" name="startDate" value="@ViewBag.StartDate" />
+                <input type="hidden" name="endDate" value="@ViewBag.EndDate" />
+
+                <div class="col-md-3">
+                    <label for="sortBy" class="form-label">Sort by:</label>
+                    <select id="sortBy" name="sortBy" class="form-select">
+                        <option value="Name">Name</option>
+                        <option value="Date">Date</option>
+                        <option value="Diameter">Diameter</option>
+                        <option value="Velocity">Velocity</option>
+                        <option value="Distance">Distance</option>
+                        <option value="Hazardous">Hazardous</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="sortOrder" class="form-label">Order:</label>
+                    <select id="sortOrder" name="sortOrder" class="form-select">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+
+                <div class="col-md-auto d-flex align-items-end">
+                    <button type="submit" asp-action="Sort" class="btn btn-secondary">Apply Sorting</button>
+                </div>
+            </form>
+
+            <table id="asteroidsTable" class="table table-hover table-striped align-middle text-center py-4">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Diameter (km)</th>
+                        <th class="text-center">Velocity (km/h)</th>
+                        <th class="text-center">Miss Distance (km)</th>
+                        <th class="text-center">Hazardous</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var a in Model)
+                    {
+                        <tr>
+                            <td>@a.Name</td>
+                            <td>@a.CloseApproachDate</td>
+                            <td>@($"{a.EstimatedDiameterKm:F3}")</td>
+                            <td>@($"{a.RelativeVelocityKph:F3}")</td>
+                            <td>@($"{a.MissDistanceKm:F3}")</td>
+                            <td>@(a.IsPotentiallyHazardous ? "Yes" : "No")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Mobile Table View -->
+
+    <div class="d-md-none">
+        @foreach (var a in Model)
+        {
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">@a.Name</h5>
+                    <p class="card-text mb-1"><strong>Date:</strong> @a.CloseApproachDate</p>
+                    <p class="card-text mb-1"><strong>Diameter:</strong> @($"{a.EstimatedDiameterKm:F3}")</p>
+                    <p class="card-text mb-1"><strong>Velocity:</strong> @($"{a.RelativeVelocityKph:F3}")</p>
+                    <p class="card-text mb-1"><strong>Miss Distance:</strong> @($"{a.MissDistanceKm:F3}")</p>
+                    <p class="card-text mb-0"><strong>Hazardous:</strong> @(a.IsPotentiallyHazardous ? "Yes" : "No")</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

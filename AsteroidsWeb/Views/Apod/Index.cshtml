@@ -1,0 +1,45 @@
+﻿@model Asteroids.Models.Apod
+
+@{
+    ViewData["Title"] = "Astronomy Picture of the Day";
+    var today = DateTime.Now.ToString("yyyy-MM-dd");
+}
+
+<h2 class="mb-4 fw-bold">NASA Astronomy Picture of the Day</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Error
+    </div>
+}
+
+<form method="get">
+    <div class="row g-2 align-items-end">
+        <div class="col-md-2">
+            <label for="date" class="form-label">Select Date:</label>
+            <input type="date" class="form-control" id="date" name="date"
+                   value="@ViewBag.SelectedDate" max="@today" />
+        </div>
+
+        <div class="col-md-auto mt-3">
+            <button class="btn btn-primary" type="submit">Load</button>
+        </div>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <div class="mt-4">
+        <h3 class="fw-bold">@Model.Title (@Model.Date)</h3>
+        @if (Model.Media_type == "image")
+        {
+            <img src="@Model.Url" alt="APOD" class="img-fluid mb-3"/>
+        }
+        else
+        {
+            <p class="fw-bold">Video: <a href="@Model.Url" target="_blank">@Model.Url</a></p>
+        }
+        <p>@Model.Explanation</p>
+    </div>
+}
